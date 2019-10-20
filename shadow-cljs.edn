@@ -1,0 +1,10 @@
+{;; use tools.deps (deps.edn) to manage deps
+ :deps true
+ 
+ ;; will start a dev server on localhost:8000
+ :dev-http {8000 "public"}
+
+ :builds {:app {:target :browser
+                :output-dir "public/assets/app/js"
+                :asset-path "/assets/app/js"
+                :modules {:main {:entries [app.core]}}}}}
